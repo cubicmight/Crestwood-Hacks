@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<h1 align="center">Schools Found </h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Student Body</th>
+    <th>Libraries Present</th>
+    <th>Doctors In The Vicinity</th>
+    <th>Job Openings</th>
+    <th>Crime Rate</th>
+    <th>Average Walking Time</th>
+    <th>Affordable Housing Rating </th>
+    <th>Number of Aftercare Programs</th>
+    <th>City</th>
+  </tr>
+{% if school_list %}
+  {% for school in school_list %}
+  <tr>
+    <td>{{school['name']}}</td>
+    <td>{{school['studentpopulation']}}</td>
+    <td>{{school['numlibraries']}}</td>
+    <td>{{school['doctors']}}</td>
+    <td>{{school['jobopenings']}}</td>
+    <td>{{school['crimerate']}}</td>
+    <td>{{school['walkingdistancetime']}}</td>
+    <td>{{school['affordability']}}</td>
+    <td>{{school['numaftercare']}}</td>
+    <td>{{school['city']}}</td>
+  </tr>
+  {% endfor %}
+{% else %}
+  <h1>No Result Found</h1>
+{% endif %}
+</table>
+<ul class="list-group list-group-flush" id="notes">
+</ul>
+{% endblock %}
