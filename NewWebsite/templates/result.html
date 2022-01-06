@@ -1,19 +1,21 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
 <h1 align="center">Schools Found </h1>
-<table>
+<table class = "table table-striped table-dark">
+  <thead>
   <tr>
-    <th>Name</th>
-    <th>Student Body</th>
-    <th>Libraries Present</th>
-    <th>Doctors In The Vicinity</th>
-    <th>Job Openings</th>
-    <th>Crime Rate</th>
-    <th>Average Walking Time</th>
-    <th>Affordable Housing Rating </th>
-    <th>Number of Aftercare Programs</th>
-    <th>City</th>
+    <th scope = "col">Name</th>
+    <th scope = "col">Student Body</th>
+    <th scope = "col">Libraries Present</th>
+    <th scope = "col">Doctors In The Vicinity</th>
+    <th scope = "col">Job Openings</th>
+    <th scope = "col">Crime Rate</th>
+    <th scope = "col">Average Walking Time</th>
+    <th scope = "col">Affordable Housing Rating </th>
+    <th scope = "col">Number of Aftercare Programs</th>
+    <th scope = "col">City</th>
   </tr>
+  </thead>
 {% if school_list %}
   {% for school in school_list %}
   <tr>
